@@ -1,0 +1,48 @@
+{
+  "snippets": {
+    "html": {
+        "snippets": {
+          "acm:eb": "<!-- BEGIN_MODULE Entry_Body id=\"${id}\" -->\n${child}|\n<!-- END_MODULE Entry_Body -->",
+          "acm:el": "<!-- BEGIN_MODULE Entry_List id=\"${id}\" -->\n${child}|\n<!-- END_MODULE Entry_List -->",
+
+          "ac:inc": "<!-- #include file=\"${file}\" -->",
+
+          "ac:nf": "<!-- BEGIN notFound -->\n${child}|\n<!-- END notFound -->",
+          "ac:sn": "<!-- BEGIN serialNavi:veil -->\n${child}|\n<!-- END serialNavi:veil -->",
+          "ac:el": "<!-- BEGIN entry:loop -->\n${child}|\n<!-- END entry:loop -->",
+          "ac:prnf": "<!-- BEGIN prevNotFound -->\n${child}|\n<!-- END prevNotFound -->",
+          "ac:prl": "<!-- BEGIN prevLink -->\n${child}|\n<!-- END prevLink -->",
+          "ac:nenf": "<!-- BEGIN nextNotFound -->\n${child}|\n<!-- END nextNotFound -->",
+          "ac:nel": "<!-- BEGIN nextLink -->\n${child}|\n<!-- END nextLink -->",
+          "ac:date": "<!-- BEGIN date:veil -->\n${child}|\n<!-- END date:veil -->",
+          "ac:new": "<!-- BEGIN new:touch -->\n${child}|\n<!-- END new:touch -->",
+          "ac:ti": "<!-- BEGIN title:veil -->\n${child}|\n<!-- END title:veil -->",
+          "ac:ca": "<!-- BEGIN category:veil -->\n${child}|\n<!-- END category:veil -->",
+          "ac:cal": "<!-- BEGIN category:loop -->\n${child}|\n<!-- END category:loop -->",
+          "ac:gl": "<!-- BEGIN glue -->\n${child}|\n<!-- END glue -->",
+          "ac:co": "<!-- BEGIN column:veil -->\n${child}|\n<!-- END column:veil -->",
+          "ac:cont": "<!-- BEGIN continueLink:veil -->\n${child}|\n<!-- END continueLink:veil -->",
+          "ac:tag": "<!-- BEGIN tag:veil -->\n${child}|\n<!-- END tag:veil -->",
+          "ac:tagl": "<!-- BEGIN tag:loop -->\n${child}|\n<!-- END tag:loop -->",
+          "ac:foo": "<!-- BEGIN footer:veil -->\n${child}|\n<!-- END footer:veil -->",
+          "ac:tba": "<!-- BEGIN trackbackAmount -->\n${child}|\n<!-- END trackbackAmount -->",
+          "ac:coma": "<!-- BEGIN commentAmount -->\n${child}|\n<!-- END commentAmount -->",
+          "ac:pa": "<!-- BEGIN pager:veil -->\n${child}|\n<!-- END pager:veil -->",
+          "ac:pal": "<!-- BEGIN page:loop -->\n${child}|\n<!-- END page:loop -->",
+          "ac:palink": "<!-- BEGIN link#front --><a href=\"{url}\"><!-- END link#front -->{page}<!-- BEGIN link#rear --></a><!-- END link#rear -->",
+          "ac:lastp": "<!-- BEGIN lastPage:veil -->\n${child}|\n<!-- END lastPage:veil -->",
+          "ac:blin": "<!-- BEGIN backLink -->\n${child}|\n<!-- END backLink -->",
+          "ac:flin": "<!-- BEGIN forwardLink -->\n${child}|\n<!-- END forwardLink -->",
+          "ac:mic": "<!-- BEGIN micropager -->\n${child}|\n<!-- END micropager -->",
+          "ac:micv": "<!-- BEGIN micropage:veil -->\n${child}|\n<!-- END micropage:veil -->",
+          "ac:miclin": "<!-- BEGIN micropageLink -->\n${child}|\n<!-- END micropageLink -->",
+          "ac:admee": "<!-- BEGIN adminEntryEdit -->\n${child}|\n<!-- END adminEntryEdit -->",
+
+          "ac:nf": "<!-- BEGIN notFound -->\n${child}|\n<!-- END notFound -->"
+        },
+        "abbreviations": {
+          "acm:eb!": "acm:eb>ac:nf>p{お探しのエントリーは見つかりませんでした。}^ac:sn>ul>li>ac:prnf{prev not found}+ac:prl>a[href=\"{url}\"]{<< {name}[trim(27, '...')|escape]}^^li>a[href=\"{upperUrl}\"]{一覧へ}^li>ac:nenf{next not found}+ac:nel>a[href=\"{url}\"]{{name}[trim(27, '...')|escape] >>}^^^^ac:el>div>ac:date>p{{date#Y}.{date#m}.{date#d}}^ac:new>p{新着}^^div>ac:inc[file=\"/admin/entry/title.html\"]+ac:ti>div>h2>a[href=\"{titleUrl}\"]{{title}[raw]}^ac:ca>p{カテゴリー：}>ac:cal>span>a[href=\"{url}\"]{{name}}^ac:gl{<}^^^^^div>ac:co>ac:inc[file=\"/include/column.html\"]+hr^ac:cont>p>a[href=\"{continueUrl}\"]{「{continueName}」の続きを読む}^^ac:admee>ac:inc[file=\"/admin/entry/edit.html\"]+ac:inc[file=\"/admin/entry/add.html\"]^ac:tag>p{関連タグ：}>ac:tagl>a[href=\"{url}\"]{{name}}^^^ac:inc[file=\"/admin/entry/action.html\"]^ac:foo>div>p{Posted by {posterName} at {date#H}:{date#i}  }>a[href=\"{inheritUrl}#permalink\"]{パーマリンク}+ac:tba>a[href=\"{trackbackUrl}#trackback\"]{トラックバック ( {trackbackAmount} )}^ac:coma>a[href=\"{commentUrl}#comment\"]{コメント ( {commentAmount} )}^^^^^^ac:pa>p{全 {itemsAmount} 件中 {itemsFrom} 〜 {itemsTo} 件目を表示}>ac:pal>ac:palink+ac:gl{, }^ac:lastp{...}>a[href=\"{lastPageUrl}\"]{lastPage}^^p>ac:blin>a[href=\"{url}\"]{« 前の{backNum}件}^ac:flin>a[href=\"{url}\"]{次の{forwardNum}件 »}^^^ac:mic>p{全 {itemsAmount} 件中 {itemsFrom} 〜 {itemsTo} 件目を表示}>>ac:pal>ac:palink+ac:gl{, }^ac:lastp{...}>a[href=\"{lastPageUrl}\"]{lastPage}^^p>ac:blin>a[href=\"{url}\"]{« 前の{backNum}件}^ac:flin>a[href=\"{url}\"]{次の{forwardNum}件 »}^^^^ac:micv>ac:miclin>p>a[href=\"url\"]{{label}}"
+        }
+    }
+  }
+}
